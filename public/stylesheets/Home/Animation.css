@@ -1,0 +1,27 @@
+/*Aplicacion de animaciones en css*/
+
+
+/*Animacion del mouse sobre los menus del nav*/
+.menu__nav div a:hover{
+    color: #e74c3c;
+    border-bottom:2px solid #e74c3c;
+    margin: 10px;
+    transition: color .3s, margin .3s;
+}
+/*Animacion del espacio de busqueda*/
+.menu__nav div input:focus{
+    /*Cambio el tamaño*/
+    width: 300px;
+    /*Elimino el borde del recuadro*/
+    outline: none;
+    /*Establezco la velocidad de animacion*/
+    transition: all 1s;
+}
+/*Animacion sobre el boton de busqueda*/
+.menu__nav div button:hover{
+    /*Extablecer el puntero de seleccion*/
+    cursor: pointer;
+    /*Cambiar el color*/
+    color: #e74c3c;
+    transition: color .3s;
+}

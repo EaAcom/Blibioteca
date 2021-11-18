@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  //- Banner de panoramica
+  .body__banner
+    img(src='/images/AdobeStock_309195144-post-dia-mundial-naturaleza.jpeg' alt='banner')
+  div.body__content
+    div
+      p.body__content-title Resumen:
+
+    if error
+      p Error getting dynamic content.
+    else
+      div.body__content-list
+        div
+          p #[strong Libros:] !{data.book_count}
+        div
+          p #[strong Copias:] !{data.book_instance_count}
+        div
+          p #[strong Copias disponibles:] !{data.book_instance_available_count}
+        div
+          p #[strong Autores:] !{data.author_count}
+        div
+          p #[strong Generos:] !{data.genre_count}
+  
+
+
+

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.title
+    h1= "Lista de libros"
+  main.body
+    div.body__catalogue
+      ul
+        each book in book_list
+          li 
+            a(href=book.url) 
+              div.marco
+                |   #{book.title}
+                |  (#{book.author.name})
+
+        else
+          b No hay libros disponibles.

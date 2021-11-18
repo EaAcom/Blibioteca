@@ -1,0 +1,36 @@
+/*Borde para la caja del menu*/
+.menu{
+    outline: 3px solid #000;
+}
+/*banner*/
+.menu__logo{
+    background-color:#f1c40f;
+}
+/*Nav*/
+.menu__nav{
+    background-color:#fff; /*#f1c40f;*/
+    border-bottom: 3px solid #000;
+}
+/*Letras del nav*/
+.menu__nav div a{
+    color:#000;
+}
+/*Contenido dinamico*/
+.body__content-title{
+    background-color: #f1c40f;
+}
+
+/*Footer*/
+
+/*Letras*/
+.footer{
+    color:#fff;
+}
+/*Sociales*/
+.footer__social-img{
+    background-color: #fff;
+}
+/*letras sublinks*/
+.footer__nav a{
+    color:#fff;
+}

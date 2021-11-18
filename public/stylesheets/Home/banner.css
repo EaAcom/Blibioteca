@@ -1,0 +1,81 @@
+/*Control de la presentacion de arriba con sus herramientas*/
+
+/*Caja contenedora de todo el banner*/
+.menu{
+    width: 100%;
+    height: 300px;
+    min-width: 727px;
+    /*Convertir el contenedor en un tipo flex*/
+    display: flex;
+}
+/*Control sobre el logo y el titulo del menu*/
+.menu__logo{
+    /*Selecciono que la caja se quede con 3/4 del espacio total en el main axis*/
+    flex-grow: 1;
+    /*Coloco la caja del logo en ultimo lugar, logrando que este arriba de la caja de nav*/
+    order: 100;
+    /*Establecer que sea una caja de tipo flex*/
+    display: flex;
+}
+/*Control sobre el contenido del logo*/
+.menu__logo-img{
+    /*background-color: darksalmon;*/
+    flex-basis: 135px;
+    /*Hace que no seda nada, evitando que se encoja la caja*/
+    flex-shrink: 0;
+    /*Separa la imagen de los otros elementos*/
+    margin: 30px 10px 0px 100px;
+    /*Modificar el tamaño de la caja*/
+    height: 190px;
+}
+/*Modificar la imagen*/
+.menu__logo-img img{
+    /*Hacer que la imagen ocupe todo el contenedor*/
+    height: 100%;
+    width: 100%;
+    /*Hace que la imagen se adapte al contener sin perder nada */
+    object-fit: contain;
+}
+/*Importar una fuente local para el titulo*/
+@font-face {
+    font-family: title;
+    src: url(../LEMONMILK-Regular.otf);
+}
+/*Controlar la caja que contiene el titulo*/
+.menu__logo-title{
+    /*background-color: darksalmon;*/
+    flex-basis: 135px;
+    /*Separa el titulo de la imagen*/
+    margin: 60px 0px 0px 30px;
+    /*Comenzar a modificar el titulo*/
+    font-family: title;
+    font-size: 50px;
+}
+
+/*Control del nav*/
+.menu__nav{
+    list-style-type:none;
+    /*Selecciono que la caja se quede con 1/4 del espacio total en el main axi*/
+    height: 40px;
+    /*Establecer que sea una caja de tipo flex*/
+    display: flex;
+    /*Coloco que el contenido vaya de derecha a izquierda*/
+    flex-direction: row-reverse;
+    border-top: 2px solid #000;
+}
+/*Control sobre los elementos del menu de nav*/
+.menu__nav div{
+    /*background-color:darkorange;
+    /*Les doy a las cajas una separacion entre cajas de 30px hacia la derecha*/
+    margin-right: 30px;
+    /*centro el contenido en mitad de la caja flex*/
+    align-self: center;
+    margin-top: 10px;
+}
+/*Control sobre el texto de los links*/
+.menu__nav div a{
+    /*Sacar subrayado*/
+    text-decoration: none;
+    font-family: title;
+    transition: color .2s, margin .2s;
+}

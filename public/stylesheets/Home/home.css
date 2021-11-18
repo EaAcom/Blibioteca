@@ -1,0 +1,38 @@
+/*Comtrol de la caja de la imagen del banner*/
+.body__banner{
+    width: 100%;
+    height: 600px;
+ }
+ /*Control la imagen del banner*/
+ .body__banner img{
+     width: 100%;
+     height: 100%;
+     /*Recortar la imagen al molde*/
+     object-fit:cover;
+ }
+
+ /*Contenido dinamico*/
+.body__content{
+     font-family: title;
+ }
+ /*Titulo*/
+ .body__content-title{
+     border: 1px solid #000;
+     text-align: center;
+     height: 100px;
+     padding-top: 25px;
+     font-size: 50px;
+ }
+ .body__content-list{
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .body__content-list div{
+     border: 2px solid #000;
+     flex-basis: 100%;
+     height: 50px;
+     text-align: center;
+ }
+ .body__content-list div p{
+     font-size: 20px;
+ }

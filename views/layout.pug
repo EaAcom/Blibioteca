@@ -1,0 +1,112 @@
+doctype html
+
+html(lang='es')
+  head
+    title= "I.P.E.T 50 | " +title
+
+    //-Contenido propio de la pagina
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon' href='/images/Ipet-50-logo.png')
+
+
+    //-Css
+    link(rel="stylesheet", href="/stylesheets/Home/banner.css")
+    link(rel="stylesheet", href="/stylesheets/Home/colors.css")
+    link(rel="stylesheet", href="/stylesheets/Home/home.css")
+    link(rel="stylesheet", href="/stylesheets/Home/Animation.css")
+    link(rel="stylesheet", href="/stylesheets/Home/footer.css")
+    link(rel="stylesheet", href="/stylesheets/catalogue.css")
+    link(rel="stylesheet", href="/stylesheets/book.css")
+    link(rel="stylesheet", href="/stylesheets/genre.css")
+    link(rel="stylesheet", href="/stylesheets/normalize.css")
+    
+
+    //-Librerias para Java Scripts
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV", crossorigin="anonymous")
+
+
+    //-Libreria para iconos en los botones
+    script(src="https://kit.fontawesome.com/b6498bfaff.js" crossorigin="anonymous")
+
+
+  //-Control del banner
+  body
+    //-Contenedor de todo el contenido
+    div(class='container-fluid')
+      //-Contenedor de la pagina actual
+      div(class='row')
+        //-Contenedor del banner
+        div(class='menu' id='inicio')
+          //-Logo
+          div(class='menu__logo')
+            //-Imagen del logo
+            div(class='menu__logo-img')
+              //-Direccion de la imagen
+              img(src="/images/logo-removebg-preview.png", alt="logo.png")
+            //-Titulo de la pagina
+            div(class='menu__logo-title')
+              b BIBLIOTECA IPET N°50 
+
+        //-Lista de links a subdirecciones dentro de la pagina para todos
+        nav 
+          ul(class="menu__nav")    
+            li
+              div
+                a(href='/catalog/genres') Generos   
+            li
+              div
+                a(href='/catalog/authors') Autores
+            li
+              div
+                a(href='/catalog/books') Lista de libros
+            li
+              div
+                a(href='/catalog') inicio
+            li
+            //-              
+              div 
+                form(action="/catalog/books" method="POST")
+                  label(for="buscador") buscar:  
+                  input(type="search" id="buscador" placeholder="libros")
+                  button(type="submit") buscar 
+          //--
+            li
+            //--Lista de subpaginas de administrador
+            hr
+            li
+              a(href='/catalog/author/create') Agregar autor
+            li
+              a(href='/catalog/genre/create') Agregar genero
+            li
+              a(href='/catalog/book/create') Agregar libro
+            li
+              a(href='/catalog/bookinstance/create') Actualizar copias
+        //--Contenido siguiente al banner
+        div(class='col-sm-10')
+          block content
+        footer.footer
+          div.footer__nav
+            div
+              p Menu
+            a(href='/catalog') Inicio
+            a(href='/catalog/books') libros
+            a(href='https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiAirG-8Zz0AhUmqZUCHWcRBAEQwqsBegQIBBAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU') administrador
+          div.footer__social
+            div.footer__social-text
+              Redes sociales
+            div.footer__social-img
+              a(href='https://www.instagram.com/laefo50/' target='_blank')
+                img(src='/images/social-ig.png' alt='instagram.png')
+            div.footer__social-img
+              a(href='https://www.facebook.com/IPET-N%C2%BA-50-Emilio-F-Olmos-385590534785489' target='_black')
+                img(src='/images/social-fc.png' alt='Facebook.png')
+          div.footer__map
+            p UBICACION
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.1999636871515!2d-62.089601149331656!3d-31.43616150426298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb281012b8744f%3A0x3b8b50751cc49dcf!2sI.P.E.T.%20N%C2%BA%2050%20-%20Escuela%20de%20Educaci%C3%B3n%20T%C3%A9cnica!5e0!3m2!1ses-419!2sar!4v1635191782356!5m2!1ses-419!2sar' width='200' height='200' style='border:0;' allowfullscreen='' loading='lazy')
+          div.footer__copy
+            div
+              b ©Copyright 2021 I.P.E.T N°50
+
+

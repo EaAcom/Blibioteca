@@ -1,0 +1,90 @@
+.title{
+    border:5px solid #000;
+    text-align: center;
+    background-color:#fff;
+    font-family: title;
+}
+.body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body__catalogue ul li a{
+    text-decoration: none;
+    color:#000;
+}
+.body__catalogue ul{
+    list-style-type: none;
+}
+/*
+.body__space{
+    flex-basis: 25%;
+    background-color: #01a3a4;
+    border-top: 5px solid black; 
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;   
+}*/
+
+.body__catalogue{
+    flex-basis: 100%;
+    background-color:#f1f2f6;
+    min-height: 500px;
+    padding: 10px;
+    border: 5px solid black; 
+}
+.marco{
+    padding: 10px;
+    margin: 10px;
+    background-color:#f1c40f;
+    border: 5px solid #000;
+    font-family: title;
+}
+
+/*
+.body__catalogue-1
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 100%;
+    border: 3px solid #000;
+}
+
+.body__catalogue-img{
+    flex-basis: 25%;
+    background-color: white;
+    height: 100%;
+    font-family: title;    
+}
+.body__catalogue-img h3{
+    margin-top: 25px;
+    color: black;
+    text-align: center;
+}
+.body__catalogue-img div{
+    height: 65%;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;   
+    border: 3px solid black;
+}
+.body__catalogue-img div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.body__catalogue-text{
+    flex-basis: 75%;
+    background-color: white;
+    height: 100%;
+    font-family: title;
+    border-left: 3px solid black;     
+   
+}
+.body__catalogue-text h3{
+    color: black;
+    padding: 22px 22px 10px 22px;
+}
+.body__catalogue-text h3 b{
+    color: green;
+}*/

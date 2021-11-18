@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+  div.title
+    h1 Author: #{author.name}
+    p #{author.lifespan}
+
+  main.genre 
+      each book in author_books
+        div.genre__flex
+          div.genre__flex-data
+            a(href=book.url) #{book.title}
+          div.genre__flex-description
+            | #{book.summary}
+
+      else
+       p This author has no books.
+      
+  //-hr
+  //-p
+    a(href=author.url+'/delete') Delete author
+  //-p
+    a(href=author.url+'/update') Update author

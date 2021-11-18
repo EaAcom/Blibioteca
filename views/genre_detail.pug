@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.title
+    h1 #{genre.name}
+  main.genre 
+        each book in genre_books
+          div.genre__flex
+            div.genre__flex-data
+              a(href=book.url) #{book.title}
+            div.genre__flex-description
+              |#{book.summary}
+        else
+          p La lista de este genero no a sido actualizada
+        
+  //-hr
+  //-p
+    a(href=genre.url+'/delete') Delete genre
+  //-p
+    a(href=genre.url+'/update') Update genre

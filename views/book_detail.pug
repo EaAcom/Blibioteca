@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  div.title 
+    h1 #{book.title}
+  main.book 
+    div.book__flex
+      div.book__flex-data
+          h3 #[strong Autor:] 
+            a(href=book.author.url) #{book.author.name}
+          hr
+          br
+          h3 #[strong ISBN:] #{book.isbn}
+          hr
+          br
+          h3 #[strong Genero:] 
+            each val, index in book.genre
+              a(href=val.url) #{val.name}
+              if index < book.genre.length - 1
+                | 
+          hr
+          br
+          h3 Copias
+            hr
+            br
+            article.date
+              each val in book_instances
+                if val.status=='Available'
+                  p.text-success #{val.status}
+                else if val.status=='Maintenance'
+                  p.text-danger #{val.status}
+                else
+                  p.text-warning #{val.status} 
+                p #[strong Editorial:] #{val.imprint}
+                p #[strong Id:] 
+                  a(href=val.url) #{val._id}
+                if val.status!='Available'
+                  p #[strong Disponibel el:] 
+                    p #{val.due_back}
+                hr
+                br
+              else
+                p There are no copies of this book in the library.
+          
+      div.book__flex-description 
+        h3 Sinopsis:
+        hr
+        br
+        p #{book.summary}
+        
+      
+  //-hr
+  //-p
+    a(href=book.url+'/delete') Delete Book
+  //-p
+    a(href=book.url+'/update') Update Book
